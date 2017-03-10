@@ -232,6 +232,8 @@ void MainWindow::read_thread(QString serverIP) {
 								lsl_event_outlet.reset(new lsl::stream_outlet(*lsl_event_info.get(),1));
 
 								blockCounter = -15;
+								status = QString("connected to %1:%2").arg(serverIP).arg(RDA_Port); // fixes re-start detection miss for status line update
+								emit sendMessage(status);
 								break;
 
 							case RDA_message::DATA32:
