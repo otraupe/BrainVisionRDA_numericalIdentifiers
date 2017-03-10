@@ -143,6 +143,9 @@ linux/LabRecorder
 *.gch
 *.pch
 
+# other Headers
+ui_*.h
+
 
 # Fortran module files
 *.mod
